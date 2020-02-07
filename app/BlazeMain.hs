@@ -1,6 +1,8 @@
 module Main where
 
+import System.IO
+
 import BlazeLib
 
 main :: IO ()
-main = putStrLn "Hello"
+main = writeFile "hello.html" producePage
