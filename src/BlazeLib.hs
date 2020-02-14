@@ -7,7 +7,7 @@ import Text.Blaze.Html5 as H
 import Text.Blaze.Html5.Attributes as A
 import Text.Blaze.Html.Renderer.Pretty
 
-producePage = renderHtml $ html $ do
+producePage = renderHtml $ docTypeHtml $ do
   H.head $ do
     H.title "Random Stuff"
     link ! rel "stylesheet" ! href "styles.css"
@@ -22,7 +22,7 @@ producePage = renderHtml $ html $ do
         input ! type_ "submit" ! name "submit"
     br
     h2 $ H.span "Returning user?"
-    H.div ! class_ "create-user-form" $ do
+    H.div ! class_ "login-user-form" $ do
       H.form ! action "login" $ do
         input ! type_ "email" ! name "email"
         input ! type_ "password" ! name "password"
